@@ -1,0 +1,32 @@
+version: "3.3"
+services:
+
+    api:
+        image: node
+        volumes:
+            - ./api:/usr/src/app
+        working_dir: /usr/src/app
+        command: bash -c "npm install && npm run start"
+        expose:
+            - 3000
+
+    nginx:
+        image: nginx
+        ports:
+            - 80:80
+        volumes:
+            - ./docker/nginx:/etc/nginx/conf.d
+        depends_on:
+            - api
+
+    db:
+        image: mongo
+        environment:
+          MONGO_INITDB_ROOT_USERNAME: optimize
+          MONGO_INITDB_ROOT_PASSWORD: toor
+          MONGO_INITDB_DATABASE: optimize
+        volumes:
+          - ./docker/db/:/docker-entrypoint-initdb.
+        expose:
+            - 5432
+
