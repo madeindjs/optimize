@@ -1,0 +1,37 @@
+{
+  "name": "optimiz-api",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A simple API to fetch Bing.com results.",
+  "author": "Alexandre Rousseau <contact@rousseau-alexandre.Fr>",
+  "keywords": [
+    "typescript",
+    "express",
+    "bing"
+  ],
+  "license": "MIT",
+  "files": [
+    "dist/**/*",
+    "!dist/**/*.test.js"
+  ],
+  "scripts": {
+    "start": "ts-node ./src/web/index.ts",
+    "test": "ts-mocha -p tsconfig.json tests/**/*.spec.ts"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.3",
+    "@types/node": "^13.9.4",
+    "@types/winston": "^2.4.4",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "async-es": "^3.2.0",
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "express-winston": "^4.0.3",
+    "inversify": "^5.0.1",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^8.8.1",
+    "winston": "^3.2.1"
+  }
+}
