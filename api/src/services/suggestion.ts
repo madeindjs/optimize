@@ -13,8 +13,6 @@ interface ISuggestionConfiguration {
 @injectable()
 export class Suggestion {
 
-    private readonly
-
     public constructor(
         @inject("Http") private readonly http: Http,
         @inject("Configuration") private readonly configuration: Configuration,
