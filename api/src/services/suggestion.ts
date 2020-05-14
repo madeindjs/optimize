@@ -28,10 +28,6 @@ export class Suggestion {
 
         const results: string[] = response.data[1];
 
-        console.log(results)
-        console.log(suggestionLimit)
-
-
         return results.slice(0, suggestionLimit).map(keyword => ({
             keyword,
             uniqCharCount: this.uniqCharCount(keyword)
