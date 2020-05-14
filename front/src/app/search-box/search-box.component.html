@@ -1,4 +1,7 @@
 <div class="SearchBox">
-    <input class="SearchBox--input"/>
+    <input class="SearchBox--input" (keyup)="onChange($event)" autofocus/>
+    <ul>
+        <li *ngFor="let result of results; index as i; trackBy: trackByFn">{{ result }}</li>
+    </ul>
 </div>
 

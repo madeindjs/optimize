@@ -4,6 +4,7 @@ import { Routes } from "./routes";
 import { Logger } from '../core/logger';
 
 const expressWinston = require('express-winston');
+const cors = require('cors');
 
 class App {
     public app: express.Application;
@@ -16,6 +17,7 @@ class App {
     }
 
     private config(): void {
+        this.app.use(cors());
         this.app.use(expressWinston.logger(Logger.PARAMETERS));
     }
 }
