@@ -4,8 +4,7 @@
     "outDir": "dist",
     "module": "commonjs",
     "types": [
-      "reflect-metadata",
-      "mocha"
+      "reflect-metadata"
     ],
     "target": "es6",
     "esModuleInterop": true,

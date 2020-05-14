@@ -6,6 +6,6 @@ export class Routes {
 
     public routes(app): void {
         app.route("/").get(this.rootController.index);
-        app.route("/suggestions").post(this.suggestionController.index);
+        app.route("/suggestions").get(this.suggestionController.index);
     }
 }

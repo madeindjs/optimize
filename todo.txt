@@ -1,6 +1,6 @@
 x 2020-05-13 setup +docker
 x 2020-05-13 initialize database +mongodb
-get configuration from MongoDB +api
+x 2020-05-14 get configuration from MongoDB +api
 make service to make HTTP call and return results +api
 setup angular 9 +front
 connect +front +back

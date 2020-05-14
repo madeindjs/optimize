@@ -3,7 +3,7 @@ import { injectable } from 'inversify';
 
 @injectable()
 export class Logger {
-    public static PARAMETERS = {
+    public static readonly PARAMETERS = {
         level: 'debug',
         transports: [
             new transports.Console()
@@ -12,6 +12,11 @@ export class Logger {
             format.colorize(),
             format.simple()
         ),
+        meta: true,
+        msg: (req, res) => `${req.method} ${req.url} ${res.statusCode} - ${res.responseTime}ms`,
+        expressFormat: true,
+        colorize: true,
+        ignoreRoute: () => false
     };
 
     private readonly winston: Winston;
