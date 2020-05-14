@@ -4,5 +4,7 @@ x 2020-05-14 get configuration from MongoDB +api
 x 2020-05-14 make service to make HTTP call and return results +api
 x 2020-05-14 setup angular 9 +front
 x 2020-05-14 connect +front +back
+handle click on suggestion +front
+improve naming +front
 (C) add cache system for HTTP call in database +api
 (C) add Docker file for production

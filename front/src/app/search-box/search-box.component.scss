@@ -10,15 +10,29 @@
 input.SearchBox--input {
     font-size: 2rem;
     border: 1px solid lightgray;
-    border-radius: 5px;
+    border-radius: 8px;
     width: 100%;
     color: rgb(20, 20, 0);
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    box-sizing: border-box;
+
+    &:valid {
+        border-bottom-left-radius: unset;
+        border-bottom-right-radius: unset;
+     }
 }
 
 .SearchBox--suggestions {
-    border: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    box-sizing: border-box;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
     width: 100%;
     overflow: hidden;
+    min-height: 40px;
 }
 
 .SearchBox--suggestion {
