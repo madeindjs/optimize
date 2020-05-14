@@ -21,7 +21,7 @@ export class Http {
 
         return await Axios.get(url, config)
             .catch(e => {
-                this.logger.error(JSON.stringify(e.response.data));
+                this.logger.error(JSON.stringify(e.response));
                 throw e;
             });
     }

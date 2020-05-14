@@ -1,20 +1,21 @@
 import { Request, Response } from "express";
-import { container } from "../core/injection";
-import { Http } from "../core/http";
-import { Configuration } from "../core/configuration";
+import { container } from "../injection";
+import { injectable } from "inversify";
+import { Suggestion } from "../services/suggestion";
 const fs = require("fs");
 
+@injectable()
 export class RootController {
     public index(req: Request, res: Response) {
-        console.log('sugges')
         res.end(fs.readFileSync("./README.md", "utf8"));
     }
 }
 
+@injectable()
 export class SuggestionsController {
     public async index(req: Request, res: Response) {
-        container.get<Configuration>("Configuration").getSuggestionConfiguration()
-            .then(suggestionConfiguration => res.send(suggestionConfiguration))
+        container.get<Suggestion>("Suggestion").search(req.query.q)
+            .then(results => res.send(results))
             .catch(error => res.send(error).status(500));
     }
 }
