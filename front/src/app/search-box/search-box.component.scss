@@ -4,16 +4,18 @@
     align-items: center;
     justify-content: center;
     max-width: 400px;
+    margin: auto;
 }
 
 input.SearchBox--input {
     font-size: 2rem;
     border: 1px solid lightgray;
+    border-radius: 5px;
     width: 100%;
+    color: rgb(20, 20, 0);
 }
 
 .SearchBox--suggestions {
-    list-style: none;
     border: 1px solid lightgray;
     width: 100%;
     overflow: hidden;
@@ -21,11 +23,11 @@ input.SearchBox--input {
 
 .SearchBox--suggestion {
     // border-bottom: 1px solid lightgray;
-    padding: 1rem;
-    width: 100%;
+    padding: 0.8rem;
+    font-size: 1.1rem;
     cursor: pointer;
 
     &:hover {
-        background-color: rgb(200, 200, 200);
+        background-color: #f2f2f2;
     }
 }

@@ -2,6 +2,7 @@ x 2020-05-13 setup +docker
 x 2020-05-13 initialize database +mongodb
 x 2020-05-14 get configuration from MongoDB +api
 x 2020-05-14 make service to make HTTP call and return results +api
-setup angular 9 +front
-connect +front +back
+x 2020-05-14 setup angular 9 +front
+x 2020-05-14 connect +front +back
 (C) add cache system for HTTP call in database +api
+(C) add Docker file for production

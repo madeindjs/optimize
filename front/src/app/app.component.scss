@@ -2,8 +2,30 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-app-search-box {
+.AppRoot--header,
+.AppRoot--footer{
+    width: 100%;
+}
+
+.AppRoot--body {
     flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+
+    max-width: 500px;
+    padding-top: 20vh;
+}
+
+.AppRoot--body--logo {
+    font-size: 4rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #2980b9;
 }
