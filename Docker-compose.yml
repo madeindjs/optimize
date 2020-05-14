@@ -22,11 +22,11 @@ services:
     db:
         image: mongo
         environment:
-          MONGO_INITDB_ROOT_USERNAME: optimize
-          MONGO_INITDB_ROOT_PASSWORD: toor
-          MONGO_INITDB_DATABASE: optimize
+            MONGO_INITDB_ROOT_USERNAME: root
+            MONGO_INITDB_ROOT_PASSWORD: toor
+            MONGO_INITDB_DATABASE: optimize
         volumes:
-          - ./docker/db/:/docker-entrypoint-initdb.
+            - ./docker/db/init.js:/docker-entrypoint-initdb.d/init.js:ro
         expose:
-            - 5432
+            - 27017
 
