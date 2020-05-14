@@ -1,0 +1,9 @@
+.AppRoot {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+app-search-box {
+    flex: 1;
+}

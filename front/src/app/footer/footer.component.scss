@@ -1,0 +1,10 @@
+footer {
+    border-top: dashed 1px black;
+    display: flex;
+    flex-direction: row;
+}
+
+footer p {
+    flex: 1;
+    text-align: center;
+}
