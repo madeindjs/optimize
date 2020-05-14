@@ -20,7 +20,12 @@ input.SearchBox--input {
 }
 
 .SearchBox--suggestion {
-    border-bottom: 1px solid lightgray;
+    // border-bottom: 1px solid lightgray;
     padding: 1rem;
     width: 100%;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgb(200, 200, 200);
+    }
 }
