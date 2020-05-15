@@ -8,4 +8,4 @@ x 2020-05-15 handle click on suggestion +front
 x 2020-05-15 improve naming +front
 (C) add cache system for HTTP call in database +api
 x (C) 2020-05-15 add Docker file for production
-correct open mongodb connection +api
+x 2020-05-15 correct open mongodb connection +api

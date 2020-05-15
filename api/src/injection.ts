@@ -8,7 +8,7 @@ import { Suggestion } from "./services/suggestion";
 export const container = new Container();
 container.bind<Http>("Http").to(Http);
 container.bind<Logger>("Logger").to(Logger);
-container.bind<Database>("Database").to(Database);
+container.bind<Database>("Database").to(Database).inSingletonScope();
 container.bind<Configuration>("Configuration").to(Configuration);
 container.bind<Suggestion>("Suggestion").to(Suggestion);
 
