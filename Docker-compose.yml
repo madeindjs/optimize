@@ -3,6 +3,7 @@ services:
 
     api:
         image: node
+        restart: always
         volumes:
             - ./api:/usr/src/app
         working_dir: /usr/src/app
@@ -12,24 +13,20 @@ services:
 
     front:
         image: node
-        expose:
-            - 4200
         volumes:
             - ./front:/usr/src/app
         working_dir: /usr/src/app
-        command: bash -c "npm install && npm run start"
 
     nginx:
         image: nginx
         ports:
             - 80:80
-        volumes:
-            - ./docker/nginx:/etc/nginx/conf.d
         depends_on:
             - api
 
     db:
         image: mongo
+        restart: always
         environment:
             MONGO_INITDB_ROOT_USERNAME: root
             MONGO_INITDB_ROOT_PASSWORD: toor
