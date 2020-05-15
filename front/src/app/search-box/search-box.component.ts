@@ -8,7 +8,7 @@ import axios from 'axios'
 })
 export class SearchBoxComponent implements OnInit {
 
-  public results = [];
+  public suggestions = [];
   public search: string;
   public isLoading = false;
 
@@ -18,7 +18,7 @@ export class SearchBoxComponent implements OnInit {
   }
 
   onSelect(value: string) {
-    this.results = [];
+    this.suggestions = [];
     this.search = value;
   }
 
@@ -26,7 +26,7 @@ export class SearchBoxComponent implements OnInit {
     const value = event.target.value;
 
     if (!value) {
-      this.results = [];
+      this.suggestions = [];
       return;
     }
 
@@ -36,7 +36,7 @@ export class SearchBoxComponent implements OnInit {
     params.append('q', value);
 
     axios.get(`http://api.lvh.me/suggestions?${params.toString()}`)
-        .then(res => this.results = res.data.map(d => d.keyword))
+        .then(res => this.suggestions = res.data.map(d => d.keyword))
         .catch(e => console.error(e))
         .finally(() => this.isLoading = false);
   }

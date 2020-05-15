@@ -1,8 +1,8 @@
 <div class="SearchBox">
     <input class="SearchBox--input" [(ngModel)]="search" #ctrl="ngModel" (keyup)="onChange($event)" autofocus required/>
-    <div class="SearchBox--suggestions" *ngIf="results.length > 0 || isLoading">
-        <div class="SearchBox--suggestion" *ngFor="let result of results; index as i;" (click)="onSelect(result)">
-            {{ result }}
+    <div class="SearchBox--suggestions" *ngIf="suggestions.length > 0 || isLoading">
+        <div class="SearchBox--suggestion" *ngFor="let suggestion of suggestions; index as i;" (click)="onSelect(suggestion)">
+            {{ suggestion }}
         </div>
     </div>
 </div>
